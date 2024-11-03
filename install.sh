@@ -3,8 +3,11 @@
 # Update Ubuntu
 sudo apt update && sudo apt upgrade -y
 
+# Clone dotfiles
+git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
+
 # Install dependencies
-sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh 
+sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh
 
 # Set zsh as default shell
 chsh -s "$(which zsh)" "$USER"
