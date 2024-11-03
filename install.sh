@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Update Ubuntu
-sudo apt update && sudo apt upgrade -y
-
 # Clone dotfiles
 git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
+
+# Update Ubuntu
+sudo apt update && sudo apt upgrade -y
 
 # Install dependencies
 sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh
