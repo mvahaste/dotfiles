@@ -120,4 +120,8 @@ return {
     lazy = true,
     event = { "BufReadPost" },
   },
+  {
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
+  },
 }
