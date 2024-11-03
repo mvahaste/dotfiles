@@ -9,9 +9,6 @@ sudo apt update && sudo apt upgrade -y
 # Install dependencies
 sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh
 
-# Set zsh as default shell
-chsh -s "$(which zsh)" "$USER"
-
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all --no-zsh
@@ -33,5 +30,9 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+# Stow dotfiles
 cd ~/dotfiles && stow .
+
+# Set zsh as default shell
+sudo chsh -s "$(which zsh)" "$USER"
 
