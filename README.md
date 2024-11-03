@@ -23,7 +23,7 @@ C:\WINDOWS\system32\wsl.exe -d Ubuntu -e sh -c "tmux attach -t main || tmux new 
 
 #### Theme
 
-The default background color for this theme is `#1b1b1b`, but I use `#000000` because I have a translucent blurred background.
+The default background color for this theme is `#1b1b1b` but I use `#000000` because I have a translucent blurred background.
 
 ```json
 {

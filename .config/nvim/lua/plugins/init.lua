@@ -53,6 +53,8 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "markdown",
+        "markdown_inline",
       },
     },
   },
@@ -104,5 +106,13 @@ return {
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
       }
     end,
+  },
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
   },
 }
