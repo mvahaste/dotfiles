@@ -14,7 +14,7 @@ chsh -s "$(which zsh)" "$USER"
 
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
+~/.fzf/install --all --no-zsh
 
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
