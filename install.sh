@@ -7,7 +7,7 @@ git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
 sudo apt update && sudo apt upgrade -y
 
 # Install dependencies
-sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh
+sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh nodejs npm
 
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
