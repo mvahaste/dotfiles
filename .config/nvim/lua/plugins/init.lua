@@ -115,4 +115,9 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
   },
+  {
+    "tpope/vim-surround",
+    lazy = true,
+    event = { "BufReadPost" },
+  },
 }
