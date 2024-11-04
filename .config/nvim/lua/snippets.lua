@@ -17,7 +17,7 @@ local prettierrc = [[
 }
 ]]
 
-function WritePrettierrc()
+function CreatePrettierrc()
   local output_file = ".prettierrc"
   local file = io.open(output_file, "w")
 
@@ -32,6 +32,6 @@ end
 
 vim.api.nvim_create_user_command(
   "CreatePrettierrc",
-  WritePrettierrc,
+  CreatePrettierrc,
   { desc = "Creates a base .prettierrc file in the project root" }
 )
