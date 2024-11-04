@@ -11,7 +11,7 @@ sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh nodejs npm
 
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all --no-zsh
+~/.fzf/install --all --no-bash --no-fish --no-update-rc
 
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
