@@ -179,5 +179,18 @@ return {
     config = function()
       require("ibl").setup()
     end
+  },
+  {
+    "xiyaowong/telescope-emoji.nvim",
+    keys = {
+      {
+        "<leader>te",
+        "<CMD>Telescope emoji<CR>",
+        desc = "Telescope emoji",
+      }
+    },
+    config = function()
+      require("telescope").load_extension("emoji")
+    end,
   }
 }
