@@ -24,7 +24,7 @@ return {
           "json-lsp",
           "typescript-language-server",
           "tailwindcss-language-server",
-          "vue-language-server",
+          "vls",
           "lua-language-server",
           "eslint-lsp",
           "prettierd",
