@@ -29,6 +29,7 @@ The default background color for this theme is `#1b1b1b` but I use `#000000` bec
 {
   "name": "Gruvbox Dark Hard",
   "background": "#000000",
+  "foreground": "#EBDBB2",
   "black": "#1B1B1B",
   "blue": "#458588",
   "brightBlack": "#928374",
@@ -41,7 +42,6 @@ The default background color for this theme is `#1b1b1b` but I use `#000000` bec
   "brightYellow": "#FABD2F",
   "cursorColor": "#EBDBB2",
   "cyan": "#689D6A",
-  "foreground": "#EBDBB2",
   "green": "#98971A",
   "purple": "#B16286",
   "red": "#CC241D",
