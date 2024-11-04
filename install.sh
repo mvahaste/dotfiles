@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Enable command tracing
-set -x
-
-# Disable command tracing on exit
-trap "sex +x" EXIT
-
 # Clone dotfiles
 git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
 
