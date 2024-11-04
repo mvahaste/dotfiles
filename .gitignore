@@ -1,5 +1,7 @@
 *.log
 
+gh/
+
 lazygit/
 
 .config/tmux/*
