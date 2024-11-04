@@ -8,3 +8,4 @@ lazygit/
 !.config/tmux/tmux.conf
 
 .config/nvim/lazy-lock.json
+.config/nextjs-nodejs

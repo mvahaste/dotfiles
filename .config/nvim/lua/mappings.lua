@@ -8,10 +8,10 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 -- vim-tmux-navigator
-map("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "Window left" })
-map("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>", { desc = "Window right" })
-map("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>", { desc = "Window down" })
-map("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "Window up" })
+map("n", "<C-h>", "<CMD> TmuxNavigateLeft<CR>", { desc = "Window left" })
+map("n", "<C-l>", "<CMD> TmuxNavigateRight<CR>", { desc = "Window right" })
+map("n", "<C-j>", "<CMD> TmuxNavigateDown<CR>", { desc = "Window down" })
+map("n", "<C-k>", "<CMD> TmuxNavigateUp<CR>", { desc = "Window up" })
 
 -- move lines
 map("v", "J", ":m '>+1<CR>gv=gv")
@@ -29,6 +29,6 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- flip boolean
-map("n", "<leader>i", "<cmd>ToggleAlternate<CR>", { desc = "Flip boolean" })
+map("n", "<leader>i", "<CMD>ToggleAlternate<CR>", { desc = "Flip boolean" })
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- map({ "n", "i", "v" }, "<C-s>", "<CMD> w <CR>")

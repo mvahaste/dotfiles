@@ -83,7 +83,7 @@ return {
     -- setting the keybinding for LazyGit with 'keys' is recommended in
     -- order to load the plugin when the command is run for the first time
     keys = {
-      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+      { "<leader>lg", "<CMD>LazyGit<CR>", desc = "LazyGit" },
     },
   },
   {
@@ -93,7 +93,7 @@ return {
   {
     "rmagatti/alternate-toggler",
     lazy = true,
-    event = { "BufReadPost" },
+    event = "BufEnter",
   },
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
@@ -126,7 +126,7 @@ return {
   {
     "tpope/vim-surround",
     lazy = true,
-    event = { "BufReadPost" },
+    event = "BufEnter",
   },
   {
     "Exafunction/codeium.vim",
@@ -144,5 +144,10 @@ return {
       },
     },
     opts = { use_default_keymaps = false },
+  },
+  {
+    "RRethy/vim-illuminate",
+    lazy = true,
+    event = "BufEnter",
   },
 }
