@@ -124,4 +124,17 @@ return {
     "Exafunction/codeium.vim",
     event = "BufEnter",
   },
+  {
+    "Wansmer/treesj",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    keys = {
+      {
+        "<leader>m",
+        "<CMD>TSJToggle<CR>",
+        desc = "Toggle Treesitter Join",
+        mode = { "n", "v" },
+      }
+    },
+    opts = { use_default_keymaps = false, },
+  },
 }
