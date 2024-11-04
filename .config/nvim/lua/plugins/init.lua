@@ -19,15 +19,24 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "typescript-language-server",
-        "tailwindcss-language-server",
-        "vue-language-server",
-        "eslint-lsp",
-        "prettierd",
-      },
-    },
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    lazy = false,
+    config = function()
+      require("mason-tool-installer").setup {
+        ensure_installed = {
+          "typescript-language-server",
+          "tailwindcss-language-server",
+          "vue-language-server",
+          "eslint-lsp",
+          "prettierd",
+        },
+        auto_update = true,
+        run_on_start = true,
+        start_delay = 3000,
+      }
+    end,
   },
   {
     "windwp/nvim-ts-autotag",
@@ -135,8 +144,8 @@ return {
         "<CMD>TSJToggle<CR>",
         desc = "Toggle Treesitter Join",
         mode = { "n", "v" },
-      }
+      },
     },
-    opts = { use_default_keymaps = false, },
+    opts = { use_default_keymaps = false },
   },
 }

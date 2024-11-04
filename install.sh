@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Enable command tracing
+set -x
+
+# Disable command tracing on exit
+trap "sex +x" EXIT
+
 # Clone dotfiles
 git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
 
@@ -30,9 +36,14 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+# Set git name and email
+if [ $USER = "mvahaste" ]; then
+  git config --global user.email "mikk.vahaste@gmail.com"
+  git config --global user.name "Mikk Vahaste"
+fi
+
 # Stow dotfiles
 cd ~/dotfiles && stow .
 
 # Set zsh as default shell
 sudo chsh -s "$(which zsh)" "$USER"
-
