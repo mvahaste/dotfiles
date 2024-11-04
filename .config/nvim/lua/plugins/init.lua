@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre',
     opts = require "configs.conform",
   },
   {
@@ -76,12 +76,9 @@ return {
       "LazyGitFilter",
       "LazyGitFilterCurrentFile",
     },
-    -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
     keys = {
       { "<leader>lg", "<CMD>LazyGit<CR>", desc = "LazyGit" },
     },
@@ -143,11 +140,37 @@ return {
         mode = { "n", "v" },
       },
     },
-    opts = { use_default_keymaps = false },
+    opts = {
+      use_default_keymaps = false,
+    },
   },
   {
     "RRethy/vim-illuminate",
     lazy = true,
     event = "BufEnter",
   },
+  {
+    "rcarriga/nvim-notify",
+    keys = {
+      {
+        "<leader>nd",
+        function()
+          require("notify").dismiss({ silent = true, pending = true })
+        end,
+        desc = "Dismiss notifications",
+      },
+      {
+        "<leader>nh",
+        "<CMD>Telescope notify<CR>",
+        desc = "View notification history",
+      },
+    },
+    opts = {
+      background_colour = "#000000",
+      timeout = 3000,
+    },
+    init = function()
+      vim.notify = require("notify")
+    end,
+  }
 }

@@ -4,6 +4,8 @@ require "nvchad.options"
 
 local o = vim.o
 
+o.termguicolors = true
+
 o.nu = true
 o.relativenumber = true
 
