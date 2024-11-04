@@ -10,7 +10,7 @@ curl -sSfL https://raw.githubusercontent.com/mvahaste/dotfiles/main/install.sh |
 
 After installing, close and reopen your terminal to configure Powerlevel10k.
 
-Install tmux plugins with `<prefix>I` (`<prefix>` is `Space`).
+Install tmux plugins with `<prefix>I` (`<prefix>` is `Space`) within tmux.
 
 ## Other
 
