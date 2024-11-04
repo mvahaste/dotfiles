@@ -1,14 +1,7 @@
 return {
   {
-    "nvimtools/none-ls.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require "configs.null-ls"
-    end,
-  },
-  {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
   {
@@ -26,9 +19,13 @@ return {
     config = function()
       require("mason-tool-installer").setup {
         ensure_installed = {
+          "css-lsp",
+          "html-lsp",
+          "json-lsp",
           "typescript-language-server",
           "tailwindcss-language-server",
           "vue-language-server",
+          "lua-language-server",
           "eslint-lsp",
           "prettierd",
         },
