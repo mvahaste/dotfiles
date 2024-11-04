@@ -1,0 +1,6 @@
+*.log
+
+lazygit/
+
+.config/tmux/*
+!.config/tmux/tmux.conf

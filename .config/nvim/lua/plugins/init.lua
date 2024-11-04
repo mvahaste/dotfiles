@@ -23,6 +23,7 @@ return {
       ensure_installed = {
         "typescript-language-server",
         "tailwindcss-language-server",
+        "vue-language-server",
         "eslint-lsp",
         "prettierd",
       },
@@ -53,6 +54,7 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "vue",
         "markdown",
         "markdown_inline",
       },
