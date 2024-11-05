@@ -190,21 +190,15 @@ return {
     end,
   },
   {
-    "hrsh7th/nvim-cmp",
-  },
-  {
-    "Exafunction/codeium.nvim",
+    "Exafunction/codeium.vim",
     event = "BufEnter",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
     config = function()
-      require("codeium").setup {
-        virtual_text = {
-          enabled = true,
-        },
-      }
+      vim.g.codeium_disable_bindings = 1
+      vim.keymap.set('i', '<C-]>', function() return vim.fn['codeium#Accept']() end, {
+        expr = true,
+        silent = true,
+        noremap = true,
+      })
     end,
-  },
+  }
 }
