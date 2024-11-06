@@ -9,3 +9,4 @@ lazygit/
 
 .config/nvim/lazy-lock.json
 .config/nextjs-nodejs
+.config/github-copilot

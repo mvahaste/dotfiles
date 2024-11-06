@@ -191,18 +191,9 @@ return {
     end,
   },
   {
-    "Exafunction/codeium.vim",
+    "github/copilot.vim",
     event = "BufEnter",
-    config = function()
-      vim.g.codeium_disable_bindings = 1
-      vim.keymap.set("i", "<C-]>", function()
-        return vim.fn["codeium#Accept"]()
-      end, {
-        expr = true,
-        silent = true,
-        noremap = true,
-      })
-    end,
+    lazy = true,
   },
   {
     "mfussenegger/nvim-jdtls",
