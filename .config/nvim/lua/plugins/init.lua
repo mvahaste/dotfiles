@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre',
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
   {
@@ -19,6 +19,7 @@ return {
     config = function()
       require("mason-tool-installer").setup {
         ensure_installed = {
+          "prettierd",
           "css-lsp",
           "html-lsp",
           "json-lsp",
@@ -27,7 +28,7 @@ return {
           "vls",
           "lua-language-server",
           "eslint-lsp",
-          "prettierd",
+          "jdtls",
         },
         auto_update = true,
         run_on_start = true,
@@ -151,7 +152,7 @@ return {
       {
         "<leader>nd",
         function()
-          require("notify").dismiss({ silent = true, pending = true })
+          require("notify").dismiss { silent = true, pending = true }
         end,
         desc = "Dismiss notifications",
       },
@@ -166,7 +167,7 @@ return {
       timeout = 3000,
     },
     init = function()
-      vim.notify = require("notify")
+      vim.notify = require "notify"
     end,
   },
   {
@@ -174,7 +175,7 @@ return {
     main = "ibl",
     config = function()
       require("ibl").setup()
-    end
+    end,
   },
   {
     "xiyaowong/telescope-emoji.nvim",
@@ -183,10 +184,10 @@ return {
         "<leader>te",
         "<CMD>Telescope emoji<CR>",
         desc = "Telescope emoji",
-      }
+      },
     },
     config = function()
-      require("telescope").load_extension("emoji")
+      require("telescope").load_extension "emoji"
     end,
   },
   {
@@ -194,11 +195,18 @@ return {
     event = "BufEnter",
     config = function()
       vim.g.codeium_disable_bindings = 1
-      vim.keymap.set('i', '<C-]>', function() return vim.fn['codeium#Accept']() end, {
+      vim.keymap.set("i", "<C-]>", function()
+        return vim.fn["codeium#Accept"]()
+      end, {
         expr = true,
         silent = true,
         noremap = true,
       })
     end,
-  }
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+    lazy = true,
+    ft = { "java" },
+  },
 }
