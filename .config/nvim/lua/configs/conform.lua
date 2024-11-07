@@ -3,12 +3,11 @@ local options = {
     lua = { "stylua" },
     css = { "prettierd" },
     html = { "prettierd" },
+    json = { "prettierd" },
     javascript = { "prettierd" },
     javascriptreact = { "prettierd" },
-    json = { "prettierd" },
     typescript = { "prettierd" },
     typescriptreact = { "prettierd" },
-    yaml = { "prettierd" },
     markdown = { "prettierd" },
   },
 

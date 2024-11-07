@@ -1,25 +1,32 @@
 require "nvchad.options"
 
--- add yours here!
+-- Appearance and UI
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
+vim.opt.nu = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
 
-local o = vim.o
+-- Clipboard and Search
+vim.opt.clipboard = "unnamedplus"
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.inccommand = "split"
 
-o.termguicolors = true
+-- Indentation and Tabs
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.breakindent = true
+vim.opt.smartindent = true
 
-o.nu = true
-o.relativenumber = true
+-- Scrolling and Offsets
+vim.opt.scrolloff = 10
 
-o.tabstop = 2
-o.softtabstop = 2
-o.shiftwidth = 2
+-- Persistent Undo
+vim.opt.undofile = true
 
-o.expandtab = true
-
-o.smartindent = true
-
-o.scrolloff = 10
-
-o.hlsearch = false
-o.incsearch = true
-
-o.termguicolors = true
+-- Display and Formatting
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }

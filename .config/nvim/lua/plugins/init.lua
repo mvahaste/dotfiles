@@ -1,9 +1,5 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    event = "BufWritePre",
-    opts = require "configs.conform",
-  },
+  -- LSP and Code Formatting
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -11,7 +7,9 @@ return {
     end,
   },
   {
-    "williamboman/mason.nvim",
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    opts = require "configs.conform",
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -20,13 +18,12 @@ return {
       require("mason-tool-installer").setup {
         ensure_installed = {
           "prettierd",
-          "css-lsp",
           "html-lsp",
+          "css-lsp",
           "json-lsp",
+          "lua-language-server",
           "typescript-language-server",
           "tailwindcss-language-server",
-          "vls",
-          "lua-language-server",
           "eslint-lsp",
         },
         auto_update = true,
@@ -35,37 +32,8 @@ return {
       }
     end,
   },
-  {
-    "windwp/nvim-ts-autotag",
-    ft = {
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "html",
-    },
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "vue",
-        "markdown",
-        "markdown_inline",
-      },
-    },
-  },
+
+  -- Git Integration
   {
     "kdheepak/lazygit.nvim",
     lazy = true,
@@ -79,19 +47,15 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    keys = {
-      { "<leader>lg", "<CMD>LazyGit<CR>", desc = "LazyGit" },
-    },
   },
+
+  -- Navigation
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-  {
-    "rmagatti/alternate-toggler",
-    lazy = true,
-    event = "BufEnter",
-  },
+
+  -- Editing Enhancements
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
     lazy = true,
@@ -113,69 +77,36 @@ return {
     end,
   },
   {
-    "OXY2DEV/markview.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-  {
     "tpope/vim-surround",
     lazy = true,
     event = "BufEnter",
   },
   {
-    "Wansmer/treesj",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    keys = {
-      {
-        "<leader>m",
-        "<CMD>TSJToggle<CR>",
-        desc = "Toggle Treesitter Join",
-        mode = { "n", "v" },
-      },
-    },
-    opts = {
-      use_default_keymaps = false,
-    },
+    "rmagatti/alternate-toggler",
+    lazy = true,
+    event = "BufEnter",
   },
   {
     "RRethy/vim-illuminate",
     lazy = true,
     event = "BufEnter",
-  },
-  {
-    "rcarriga/nvim-notify",
-    keys = {
-      {
-        "<leader>nd",
-        function()
-          require("notify").dismiss { silent = true, pending = true }
-        end,
-        desc = "Dismiss notifications",
-      },
-      {
-        "<leader>nh",
-        "<CMD>Telescope notify<CR>",
-        desc = "View notification history",
-      },
-    },
-    opts = {
-      background_colour = "#000000",
-      timeout = 3000,
-    },
-    init = function()
-      vim.notify = require "notify"
-    end,
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
     config = function()
-      require("ibl").setup()
+      require("illuminate").configure {
+        delay = 1000,
+      }
     end,
   },
+  {
+    "Wansmer/treesj",
+    lazy = true,
+    event = "BufEnter",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      use_default_keymaps = false,
+    },
+  },
+
+  -- Miscellaneous
   {
     "xiyaowong/telescope-emoji.nvim",
     keys = {
@@ -190,8 +121,12 @@ return {
     end,
   },
   {
-    "github/copilot.vim",
-    event = "BufEnter",
+    "zbirenbaum/copilot.lua",
     lazy = true,
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup {}
+    end,
   },
 }

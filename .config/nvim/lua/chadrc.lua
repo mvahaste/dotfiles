@@ -10,21 +10,22 @@ M.base46 = {
   transparency = true,
 
   -- hl_override = {
-  --   Comment = { italic = true },
-  --   ["@comment"] = { italic = true },
+  -- 	Comment = { italic = true },
+  -- 	["@comment"] = { italic = true },
   -- },
 }
 
 M.ui = {
+  cmp = {
+    format_colors = {
+      tailwind = true,
+    },
+  },
   statusline = {
     theme = "minimal",
   },
   tabufline = {
-    modules = {
-      btns = function()
-        return ""
-      end,
-    },
+    order = { "treeOffset", "buffers", "tabs" },
   },
 }
 
