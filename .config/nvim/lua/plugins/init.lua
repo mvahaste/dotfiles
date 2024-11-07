@@ -28,7 +28,6 @@ return {
           "vls",
           "lua-language-server",
           "eslint-lsp",
-          "jdtls",
         },
         auto_update = true,
         run_on_start = true,
@@ -194,10 +193,5 @@ return {
     "github/copilot.vim",
     event = "BufEnter",
     lazy = true,
-  },
-  {
-    "mfussenegger/nvim-jdtls",
-    lazy = true,
-    ft = { "java" },
   },
 }
