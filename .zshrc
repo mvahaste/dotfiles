@@ -70,6 +70,7 @@ zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 # Aliases
 alias ls="ls --color"
 alias n="nvim"
+alias lg="lazygit"
 
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
