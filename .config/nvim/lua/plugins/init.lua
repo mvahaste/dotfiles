@@ -50,6 +50,13 @@ return {
     end,
   },
 
+  -- Debugging
+  {
+    "folke/trouble.nvim",
+    opts = {},
+    cmd = "Trouble",
+  },
+
   -- Git Integration
   {
     "kdheepak/lazygit.nvim",
