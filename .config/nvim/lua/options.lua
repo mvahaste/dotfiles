@@ -2,10 +2,10 @@ require "nvchad.options"
 
 -- Appearance and UI
 vim.opt.termguicolors = true
-vim.opt.cursorline = true
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
+vim.opt.cursorlineopt = "both"
 
 -- Clipboard and Search
 vim.opt.clipboard = "unnamedplus"
@@ -22,11 +22,7 @@ vim.opt.breakindent = true
 vim.opt.smartindent = true
 
 -- Scrolling and Offsets
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 15
 
 -- Persistent Undo
 vim.opt.undofile = true
-
--- Display and Formatting
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
