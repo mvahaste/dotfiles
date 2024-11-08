@@ -78,6 +78,10 @@ return {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+  },
 
   -- Editing Enhancements
   {
