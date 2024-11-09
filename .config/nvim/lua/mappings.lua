@@ -19,6 +19,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Leader w/q
+vim.keymap.set("n", "<leader>w", "<CMD>w<CR>", { desc = "Save" })
+vim.keymap.set("n", "<leader>q", "<CMD>q<CR>", { desc = "Quit" })
+
 -- Save Shortcut
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<CMD> w <CR>")
 
