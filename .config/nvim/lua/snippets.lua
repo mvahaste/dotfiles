@@ -24,9 +24,9 @@ function CreatePrettierrc()
   if file then
     file:write(prettierrc)
     file:close()
-    print(".prettierrc created in project root")
+    print ".prettierrc created in project root"
   else
-    print("Error: Could not create .prettierrc")
+    print "Error: Could not create .prettierrc"
   end
 end
 
