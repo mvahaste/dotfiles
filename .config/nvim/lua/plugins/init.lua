@@ -41,6 +41,7 @@ return {
           "lua-language-server",
           "typescript-language-server",
           "tailwindcss-language-server",
+          "vls",
           "eslint-lsp",
         },
         auto_update = true,
@@ -170,7 +171,7 @@ return {
       require("copilot").setup {
         suggestion = {
           auto_trigger = true,
-        }
+        },
       }
     end,
   },
