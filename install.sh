@@ -9,6 +9,10 @@ sudo apt update && sudo apt upgrade -y
 # Install dependencies
 sudo apt install -y stow zsh tmux build-essential unzip ripgrep gh nodejs npm
 
+# Set up global npm directory
+mkdir -p ~/.npm-global
+npm config set prefix "~/.npm-global"
+
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all --no-bash --no-fish --no-update-rc

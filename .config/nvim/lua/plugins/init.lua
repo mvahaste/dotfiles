@@ -41,7 +41,7 @@ return {
           "lua-language-server",
           "typescript-language-server",
           "tailwindcss-language-server",
-          "vls",
+          "vue-language-server",
           "eslint-lsp",
         },
         auto_update = true,
