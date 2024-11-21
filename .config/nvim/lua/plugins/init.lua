@@ -20,6 +20,7 @@ return {
         "tsx",
         "markdown",
         "markdown_inline",
+        "json",
       },
     },
   },
