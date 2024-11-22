@@ -13,6 +13,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.npm-global/bin"
 export PATH="$PATH:/Users/mvahaste/.spicetify"
+export PATH="$PATH:/Users/mvahaste/Gradle/gradle-8.5/bin"
 
 # Set zinit and plugins directory
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"

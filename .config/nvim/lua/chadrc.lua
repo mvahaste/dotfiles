@@ -6,12 +6,15 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
+  theme = "everblush",
   transparency = true,
   hl_override = {
     CursorLine = {
-      bg = "black",
+      bg = "black2",
     },
+    Visual = {
+      bg = "black2",
+    }
   }
 }
 
@@ -22,7 +25,7 @@ M.ui = {
     },
   },
   statusline = {
-    theme = "minimal",
+    theme = "vscode",
   },
   tabufline = {
     order = { "treeOffset", "buffers", "tabs" },
