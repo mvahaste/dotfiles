@@ -9,6 +9,7 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.npm-global/bin"
+export PATH="$PATH:/Users/mvahaste/.spicetify"
 
 # Set zinit and plugins directory
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -76,4 +77,3 @@ alias lg="lazygit"
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init --cmd cd zsh)"
-
