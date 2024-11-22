@@ -9,11 +9,8 @@ M.base46 = {
   theme = "everblush",
   transparency = true,
   hl_override = {
-    CursorLine = {
-      bg = "black2",
-    },
     Visual = {
-      bg = "black2",
+      bg = "grey",
     }
   }
 }
