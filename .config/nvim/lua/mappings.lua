@@ -58,3 +58,7 @@ vim.keymap.set("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.posit
   { desc = "LSP Definitions / references / ... (Trouble)" })
 vim.keymap.set("n", "<leader>tL", "<cmd>Trouble loclist toggle<cr>", { desc = "Location List (Trouble)" })
 vim.keymap.set("n", "<leader>tQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix List (Trouble)" })
+
+-- Copilot
+vim.keymap.set("i", "<M-i>", function() require("copilot.suggestion").accept() end,
+  { noremap = true, silent = true, desc = "Accept Copilot suggestion" })
