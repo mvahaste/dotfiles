@@ -18,6 +18,7 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "vue",
         "markdown",
         "markdown_inline",
         "json",
