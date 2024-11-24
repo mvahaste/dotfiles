@@ -37,6 +37,16 @@ vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
 
+-- Harpoon
+-- vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, { desc = "Add a file to Harpoon" })
+-- vim.keymap.set("n", "<C-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggle Harpoon list" })
+-- vim.keymap.set("n", "<leader-1>", function() harpoon:list():select(1) end, { desc = "Switch to Harpoon buffer 1" })
+-- vim.keymap.set("n", "<leader-2>", function() harpoon:list():select(2) end, { desc = "Switch to Harpoon buffer 2" })
+-- vim.keymap.set("n", "<leader-3>", function() harpoon:list():select(3) end, { desc = "Switch to Harpoon buffer 3" })
+-- vim.keymap.set("n", "<leader-4>", function() harpoon:list():select(4) end, { desc = "Switch to Harpoon buffer 4" })
+-- vim.keymap.set("n", "<leader-5>", function() harpoon:list():select(5) end, { desc = "Switch to Harpoon buffer 5" })
+-- vim.keymap.set("n", "<leader-6>", function() harpoon:list():select(6) end, { desc = "Switch to Harpoon buffer 6" })
+
 -- Toggle Boolean
 vim.keymap.set("n", "<leader>i", "<CMD>ToggleAlternate<CR>", { desc = "Toggle boolean" })
 
