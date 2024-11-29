@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "gruvchad",
+  theme = "chocolate",
   transparency = true,
   hl_override = {
     Visual = {
