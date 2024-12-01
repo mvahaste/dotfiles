@@ -4,6 +4,7 @@ local options = {
     css = { "prettierd" },
     html = { "prettierd" },
     json = { "prettierd" },
+    toml = { "taplo" },
     javascript = { "prettierd" },
     javascriptreact = { "prettierd" },
     typescript = { "prettierd" },
