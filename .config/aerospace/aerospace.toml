@@ -167,3 +167,8 @@ alt-shift-l = ["join-with right", "mode main"]
 if.app-id = "org.mozilla.com.zen.browser"
 if.window-title-regex-substring = "Picture-in-Picture"
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.facebook.archon"
+if.window-title-regex-substring = "Media Viewer"
+run = "layout floating"
