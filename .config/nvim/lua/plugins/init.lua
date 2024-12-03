@@ -180,6 +180,10 @@ return {
     end,
   },
   {
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown",
+  },
+  {
     "OXY2DEV/markview.nvim",
     ft = "markdown",
     dependencies = {
