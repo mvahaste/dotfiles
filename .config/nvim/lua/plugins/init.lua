@@ -187,4 +187,18 @@ return {
       "nvim-tree/nvim-web-devicons"
     },
   },
+  {
+    "ellisonleao/glow.nvim",
+    cmd = "Glow",
+    config = function()
+      require("glow").setup {
+        install_path = "opt/homebrew/bin/glow",
+        width = 999,
+        height = 999,
+        width_ratio = 0.85,
+        height_ratio = 0.85,
+        border = "rounded",
+      }
+    end,
+  }
 }
