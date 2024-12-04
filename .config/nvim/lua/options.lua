@@ -22,7 +22,7 @@ vim.opt.breakindent = true
 vim.opt.smartindent = true
 
 -- Scrolling and Offsets
-vim.opt.scrolloff = 15
+vim.opt.scrolloff = 10
 
 -- Persistent Undo
 vim.opt.undofile = true
