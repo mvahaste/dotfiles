@@ -205,5 +205,12 @@ return {
         border = "rounded",
       }
     end,
+  },
+  {
+    "Aasim-A/scrollEOF.nvim",
+    event = { "CursorMoved", "WinScrolled" },
+    config = function()
+      require("scrollEOF").setup()
+    end,
   }
 }
