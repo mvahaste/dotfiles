@@ -72,3 +72,6 @@ vim.keymap.set("n", "<leader>tQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Qu
 -- Copilot
 vim.keymap.set("i", "<M-i>", function() require("copilot.suggestion").accept() end,
   { noremap = true, silent = true, desc = "Accept Copilot suggestion" })
+
+-- Paste image
+vim.keymap.set("n", "<leader>pi", "<CMD>PasteImage<CR>", { desc = "Paste image from system clipboard" })

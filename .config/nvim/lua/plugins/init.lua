@@ -24,6 +24,7 @@ return {
         "json",
         "toml",
         "latex",
+        "bash",
       },
     },
   },
@@ -185,32 +186,17 @@ return {
     ft = "markdown",
   },
   {
-    "OXY2DEV/markview.nvim",
-    ft = "markdown",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons"
-    },
-  },
-  {
-    "ellisonleao/glow.nvim",
-    cmd = "Glow",
-    config = function()
-      require("glow").setup {
-        install_path = "opt/homebrew/bin/glow",
-        width = 999,
-        height = 999,
-        width_ratio = 0.85,
-        height_ratio = 0.85,
-        border = "rounded",
-      }
-    end,
-  },
-  {
     "Aasim-A/scrollEOF.nvim",
     event = { "CursorMoved", "WinScrolled" },
     config = function()
       require("scrollEOF").setup()
     end,
+  },
+  {
+    "HakonHarnes/img-clip.nvim",
+    event = "VeryLazy",
+    keys = {
+      { "<leader>pi", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+    },
   }
 }
