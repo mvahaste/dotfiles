@@ -10,6 +10,7 @@ local options = {
     typescript = { "prettierd" },
     typescriptreact = { "prettierd" },
     markdown = { "prettierd" },
+    python = { "black" },
   },
 
   format_on_save = {

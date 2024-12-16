@@ -4,7 +4,7 @@
 git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
 
 # Install dependencies
-brew install stow zsh tmux unzip ripgrep gh nodejs npm neovim lazygit zoxide fzf glow pngpaste
+brew install stow zsh tmux unzip ripgrep gh nodejs npm neovim lazygit zoxide fzf glow pngpaste black
 
 # Set up global npm directory
 mkdir -p ~/.npm-global
