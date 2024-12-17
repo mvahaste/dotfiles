@@ -78,6 +78,21 @@ alias ls="ls --color"
 alias n="nvim"
 alias lg="lazygit"
 
+# Functions
+function crcpp() {
+  if [ -z "$1" ] || [ "$1" = "-h" ]; then
+    echo "Compile and run C++ files"
+    echo "Usage: crcpp <filename>"
+    return 1
+  fi
+
+  clang++ $1.cpp -o $1
+
+  if [ $? -eq 0 ]; then
+    ./$1
+  fi
+}
+
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init --cmd cd zsh)"
