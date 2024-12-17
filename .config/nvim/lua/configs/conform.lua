@@ -11,6 +11,7 @@ local options = {
     typescriptreact = { "prettierd" },
     markdown = { "prettierd" },
     python = { "black" },
+    cpp = { "clang-format" },
   },
 
   format_on_save = {

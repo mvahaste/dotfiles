@@ -15,3 +15,17 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
+
+-- c++
+lspconfig.clangd.setup {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    nvlsp.on_attach(client, bufnr)
+  end,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  }
+}

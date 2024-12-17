@@ -1,5 +1,5 @@
 return {
-  -- LSP and Code Formatting
+  -- LSP, Code Formatting, Mason
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -26,6 +26,7 @@ return {
         "latex",
         "bash",
         "python",
+        "cpp",
       },
     },
   },
@@ -51,6 +52,9 @@ return {
           "eslint-lsp",
           "taplo",
           "pyright",
+          "clangd",
+          "clang-format",
+          "codelldb",
         },
         auto_update = true,
         run_on_start = true,
@@ -58,12 +62,76 @@ return {
       }
     end,
   },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap"
+    },
+    opts = {
+      handlers = {},
+    }
+  },
 
   -- Debugging
   {
     "folke/trouble.nvim",
     opts = {},
     cmd = "Trouble",
+  },
+  {
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "nvim-neotest/nvim-nio",
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    config = function()
+      local dap = require("dap")
+      local dapui = require("dapui")
+
+      dapui.setup()
+
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+      end
+
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+      end
+    end,
+  },
+
+  -- Compiling and running
+  {
+    "Zeioth/compiler.nvim",
+    cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
+    dependencies = { "stevearc/overseer.nvim", "nvim-telescope/telescope.nvim" },
+    opts = {},
+  },
+  {
+    "stevearc/overseer.nvim",
+    commit = "6271cab7ccc4ca840faa93f54440ffae3a3918bd",
+    cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
+    opts = {
+      task_list = {
+        direction = "bottom",
+        min_height = 25,
+        max_height = 25,
+        default_detail = 1
+      },
+    },
   },
 
   -- Git Integration

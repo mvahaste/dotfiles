@@ -33,9 +33,9 @@ vim.keymap.set("n", "<C-k>", "<CMD> TmuxNavigateUp<CR>", { desc = "Window up" })
 vim.keymap.set("n", "<C-h>", "<CMD> TmuxNavigateLeft<CR>", { desc = "Window left" })
 
 -- Leap
-vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
-vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
-vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
+vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
+vim.keymap.set({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
 
 -- Harpoon
 -- vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, { desc = "Add a file to Harpoon" })
@@ -68,6 +68,20 @@ vim.keymap.set("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.posit
   { desc = "LSP Definitions / references / ... (Trouble)" })
 vim.keymap.set("n", "<leader>tL", "<cmd>Trouble loclist toggle<cr>", { desc = "Location List (Trouble)" })
 vim.keymap.set("n", "<leader>tQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix List (Trouble)" })
+
+-- Debugger
+vim.keymap.set("n", "<leader>db", "<CMD>DapToggleBreakpoint<CR>", { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<leader>dr", "<CMD>DapContinue<CR>", { desc = "Start or continue the debugger" })
+
+-- Compiler
+vim.api.nvim_set_keymap("n", "<leader>co", "<cmd>CompilerOpen<cr>",
+  { noremap = true, silent = true, desc = "Open compiler" })
+vim.api.nvim_set_keymap("n", "<leader>cr",
+  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+  .. "<cmd>CompilerRedo<cr>",
+  { noremap = true, silent = true, desc = "Compiler redo last" })
+vim.api.nvim_set_keymap("n", "<leader>ct", "<cmd>CompilerToggleResults<cr>",
+  { noremap = true, silent = true, desc = "Compiler toggle results" })
 
 -- Copilot
 vim.keymap.set("i", "<M-i>", function() require("copilot.suggestion").accept() end,
