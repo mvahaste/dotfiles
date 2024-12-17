@@ -1,19 +1,14 @@
 local prettierrc = [[
 {
-  "arrowParens": "avoid",
-  "bracketSpacing": true,
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false,
-  "jsxSingleQuote": false,
   "printWidth": 80,
-  "proseWrap": "always",
-  "quoteProps": "as-needed",
-  "requirePragma": false,
-  "semi": false,
+  "tabWidth": 4,
+  "useTabs": true,
+  "semi": true,
   "singleQuote": false,
-  "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
 }
 ]]
 

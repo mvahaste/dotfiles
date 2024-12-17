@@ -8,11 +8,6 @@ local M = {}
 M.base46 = {
   theme = "chocolate",
   transparency = true,
-  hl_override = {
-    Visual = {
-      bg = "grey",
-    }
-  }
 }
 
 M.ui = {

@@ -21,3 +21,5 @@ curl -sSfL https://raw.githubusercontent.com/mvahaste/dotfiles/main/install-maco
 After installing, close and reopen your terminal to configure Powerlevel10k.
 
 Install tmux plugins with `<prefix>I` (`<prefix>` is `Option + Space`) within tmux.
+
+Install dependencies with `:MasonToolsInstall` in neovim.
