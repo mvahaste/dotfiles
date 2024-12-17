@@ -19,7 +19,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Leader w/q
+-- Enter new line above/below
+vim.keymap.set("n", "<leader>o", "o<Esc>k")
+vim.keymap.set("n", "<leader>O", "O<Esc>j")
+
+-- Leader w/q to save/quit
 vim.keymap.set("n", "<leader>w", "<CMD>w<CR>", { desc = "Save" })
 vim.keymap.set("n", "<leader>q", "<CMD>q<CR>", { desc = "Quit" })
 
