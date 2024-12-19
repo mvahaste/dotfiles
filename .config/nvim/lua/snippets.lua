@@ -1,8 +1,8 @@
 local prettierrc = [[
 {
   "printWidth": 80,
-  "tabWidth": 4,
-  "useTabs": true,
+  "tabWidth": 2,
+  "useTabs": false,
   "semi": true,
   "singleQuote": false,
   "trailingComma": "all",
