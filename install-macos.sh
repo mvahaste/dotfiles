@@ -13,6 +13,9 @@ npm config set prefix "~/.npm-global"
 # Install tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Install deno
+curl -fsSL https://deno.land/install.sh | sh
+
 # Set git name and email
 if [ $USER = "mvahaste" ]; then
   git config --global user.email "mikk.vahaste@gmail.com"
