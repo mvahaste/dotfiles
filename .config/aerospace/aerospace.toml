@@ -186,3 +186,8 @@ run = "layout floating"
 if.app-id = "org.godotengine.godot"
 if.window-title-regex-substring = "DEBUG"
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "ch.protonvpn.mac.window"
+if.window-title-regex-substring = "Proton VPN"
+run = "layout floating"
