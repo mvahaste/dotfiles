@@ -188,6 +188,6 @@ if.window-title-regex-substring = "DEBUG"
 run = "layout floating"
 
 [[on-window-detected]]
-if.app-id = "ch.protonvpn.mac.window"
+if.app-id = "ch.protonvpn.mac"
 if.window-title-regex-substring = "Proton VPN"
 run = "layout floating"
