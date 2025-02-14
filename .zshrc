@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Fix terminal colors
-export TERM="screen-256color-bce"
+# export TERM="screen-256color-bce"
 
 # Add to path
 export PATH="$HOME/.local/bin:$PATH"
