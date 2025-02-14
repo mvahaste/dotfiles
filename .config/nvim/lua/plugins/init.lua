@@ -257,6 +257,13 @@ return {
     ft = "markdown",
   },
   {
+    "richardbizik/nvim-toc",
+    ft = "markdown",
+    config = function()
+      require("nvim-toc").setup {}
+    end,
+  },
+  {
     "toppair/peek.nvim",
     event = { "VeryLazy" },
     build = "deno task --quiet build:fast",
