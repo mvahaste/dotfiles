@@ -160,6 +160,14 @@ return {
     "ggandor/leap.nvim",
     lazy = false,
   },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("harpoon").setup {}
+    end,
+  },
 
   -- Editing Enhancements
   {
