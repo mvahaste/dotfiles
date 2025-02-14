@@ -272,6 +272,12 @@ return {
     end,
   },
   {
+    "folke/todo-comments.nvim",
+    lazy = false,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+  {
     "toppair/peek.nvim",
     event = { "VeryLazy" },
     build = "deno task --quiet build:fast",
