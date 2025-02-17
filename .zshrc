@@ -81,17 +81,33 @@ alias n="nvim"
 alias lg="lazygit"
 
 # Functions
+# Compile and run C++ files
 function crcpp() {
   if [ -z "$1" ] || [ "$1" = "-h" ]; then
     echo "Compile and run C++ files"
-    echo "Usage: crcpp <filename>"
+    echo "Usage: crcpp <filename> <args>"
     return 1
   fi
 
   clang++ $1.cpp -o $1
 
   if [ $? -eq 0 ]; then
-    ./$1
+    ./$1 "${@:2}"
+  fi
+}
+
+# Compile and run Java files
+function crjava() {
+  if [ -z "$1" ] || [ "$1" = "-h" ]; then
+    echo "Compile and run Java files"
+    echo "Usage: crjava <filename> <args>"
+    return 1
+  fi
+
+  javac $1
+
+  if [ $? -eq 0 ]; then
+    java $1 "${@:2}"
   fi
 }
 
@@ -103,3 +119,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "/Users/mvahaste/.deno/env"
+
