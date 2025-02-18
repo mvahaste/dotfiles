@@ -39,5 +39,3 @@ Add the following snippet to the "Send text at start" option in iTerm to automat
 ```
 tmux attach -t main || tmux new -s main
 ```
-
-I also remapped the left command key to send the left control instead since it's more comfortable to press.
