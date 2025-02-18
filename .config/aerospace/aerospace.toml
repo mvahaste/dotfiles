@@ -191,3 +191,8 @@ run = "layout floating"
 if.app-id = "ch.protonvpn.mac"
 if.window-title-regex-substring = "Proton VPN"
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "org.eduvpn.app"
+if.window-title-regex-substring = "eduVPN"
+run = "layout floating"
