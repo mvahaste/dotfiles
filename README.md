@@ -1,12 +1,12 @@
-# Dotfiles
+# 🎨 Dotfiles
 
 My development setup with zsh, tmux and neovim on macOS.
 
 _Old WSL version [here](/WSL.md)._
 
-## Install
+## ⚙️ Install
 
-### Homebrew
+### ☕ Homebrew
 
 First install brew.
 
@@ -14,7 +14,7 @@ First install brew.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Dotfiles
+### 🗂️ Dotfiles
 
 Then install the dotfiles.
 
@@ -22,17 +22,17 @@ Then install the dotfiles.
 curl -sSfL https://raw.githubusercontent.com/mvahaste/dotfiles/main/install-macos.sh | sh
 ```
 
-### Powerlevel10k
+### 🔋 Powerlevel10k
 
 After installing, close and reopen your terminal to configure Powerlevel10k.
 
-### Plugins & Dependencies
+### 🔌 Plugins & Dependencies
 
 Install tmux plugins with `<prefix>I` (`<prefix>` is `Option + Space`) within tmux.
 
 Install mason dependencies with `:MasonToolsInstall` in neovim.
 
-### iTerm
+### 📺 iTerm
 
 Add the following snippet to the "Send text at start" option in iTerm to automatically attach to or create the `main` tmux session:
 
