@@ -33,6 +33,9 @@ vim.keymap.set("i", "<C-H>", "<C-W>", { desc = "Delete previous word" })
 -- Save Shortcut
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<CMD> w <CR>")
 
+-- Log selection in new line
+vim.keymap.set("v", "<leader>l", "yoconsole.log(\"<ESC>pa:\", <ESC>pa);<ESC>", { desc = "console.log selection" })
+
 -- Navigate windows and tmux
 vim.keymap.set("n", "<C-l>", "<CMD> TmuxNavigateRight<CR>", { desc = "Window right" })
 vim.keymap.set("n", "<C-j>", "<CMD> TmuxNavigateDown<CR>", { desc = "Window down" })
