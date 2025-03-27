@@ -56,8 +56,8 @@ vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "Open Lazygit" })
 -- Treesitter join
 vim.keymap.set({ "n", "v" }, "<leader>m", "<CMD>TSJToggle<CR>", { desc = "Toggle Treesitter join" })
 
--- Telescope emoji
-vim.keymap.set("n", "<leader>te", "<CMD>Telescope emoji<CR>", { desc = "Telescope emoji" })
+-- Telescope notify
+vim.keymap.set("n", "<leader>n", "<CMD>Telescope notify<CR>", { desc = "Telescope notify" })
 
 -- Trouble
 vim.keymap.set("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
