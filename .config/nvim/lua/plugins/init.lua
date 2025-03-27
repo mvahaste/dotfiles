@@ -335,5 +335,9 @@ return {
     keys = {
       { "<leader>pi", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
     },
+  },
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
   }
 }
