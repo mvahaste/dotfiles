@@ -47,10 +47,6 @@ vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
 vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
 vim.keymap.set({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
 
--- Harpoon
----@diagnostic disable-next-line: different-requires
-require "plugins.harpoon" -- Separate file since it needs a bit more setup
-
 -- Toggle Boolean
 vim.keymap.set("n", "<leader>i", "<CMD>ToggleAlternate<CR>", { desc = "Toggle boolean" })
 

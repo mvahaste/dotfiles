@@ -158,14 +158,9 @@ return {
   {
     "ggandor/leap.nvim",
     lazy = false,
-  },
-  {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("harpoon").setup()
-    end,
+      vim.api.nvim_set_hl(0, 'LeapBackdrop', { link = 'Comment' })
+    end
   },
 
   -- Editing Enhancements
@@ -218,7 +213,7 @@ return {
     event = "BufEnter",
     config = function()
       require("illuminate").configure {
-        delay = 1000,
+        delay = 0,
       }
     end,
   },
@@ -233,19 +228,6 @@ return {
   },
 
   -- Miscellaneous
-  {
-    "xiyaowong/telescope-emoji.nvim",
-    keys = {
-      {
-        "<leader>te",
-        "<CMD>Telescope emoji<CR>",
-        desc = "Telescope emoji",
-      },
-    },
-    config = function()
-      require("telescope").load_extension "emoji"
-    end,
-  },
   {
     "zbirenbaum/copilot.lua",
     lazy = true,
@@ -294,13 +276,6 @@ return {
     config = function()
       require("scrollEOF").setup()
     end,
-  },
-  {
-    "HakonHarnes/img-clip.nvim",
-    event = "VeryLazy",
-    keys = {
-      { "<leader>pi", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
-    },
   },
   {
     "xiyaowong/transparent.nvim",
