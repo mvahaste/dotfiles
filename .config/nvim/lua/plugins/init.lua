@@ -1,10 +1,43 @@
 return {
   -- LSP, Code Formatting, Mason
   {
+    "nvim-java/nvim-java",
+    lazy = false,
+    dependencies = {
+      "nvim-java/lua-async-await",
+      "nvim-java/nvim-java-core",
+      "nvim-java/nvim-java-test",
+      "nvim-java/nvim-java-dap",
+      "MunifTanjim/nui.nvim",
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      {
+        "williamboman/mason.nvim",
+        opts = {
+          registries = {
+            "github:nvim-java/mason-registry",
+            "github:mason-org/mason-registry",
+          },
+        },
+      },
+    },
+    config = function()
+      require("java").setup {}
+      require("lspconfig").jdtls.setup {
+        on_attach = require("nvchad.configs.lspconfig").on_attach,
+        capabilities = require("nvchad.configs.lspconfig").capabilities,
+        filetypes = { "java" },
+      }
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
+    dependencies = {
+      "nvim-java/nvim-java",
+    }
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -55,6 +88,7 @@ return {
           "clangd",
           "clang-format",
           "codelldb",
+          "jdtls",
         },
         auto_update = true,
         run_on_start = true,
@@ -164,7 +198,7 @@ return {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("harpoon").setup {}
+      require("harpoon").setup()
     end,
   },
 
