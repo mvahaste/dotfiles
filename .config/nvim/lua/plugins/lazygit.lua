@@ -1,6 +1,6 @@
 return {
   "kdheepak/lazygit.nvim",
-  lazy = true,
+  lazy = false,
   cmd = {
     "LazyGit",
     "LazyGitConfig",
@@ -13,5 +13,5 @@ return {
   },
   config = function()
     vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "Open Lazygit" })
-  end
+  end,
 }
