@@ -11,4 +11,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
+  config = function()
+    vim.keymap.set("n", "<leader>lg", "<CMD>LazyGit<CR>", { desc = "Open Lazygit" })
+  end
 }

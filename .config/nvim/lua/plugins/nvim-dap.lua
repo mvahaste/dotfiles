@@ -1,5 +1,12 @@
 return {
   {
+    "mfussenegger/nvim-dap",
+    config = function()
+      vim.keymap.set("n", "<leader>db", "<CMD>DapToggleBreakpoint<CR>", { desc = "Toggle breakpoint" })
+      vim.keymap.set("n", "<leader>dr", "<CMD>DapContinue<CR>", { desc = "Start or continue the debugger" })
+    end,
+  },
+  {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -9,9 +16,6 @@ return {
     opts = {
       handlers = {},
     }
-  },
-  {
-    "mfussenegger/nvim-dap",
   },
   {
     "rcarriga/nvim-dap-ui",
