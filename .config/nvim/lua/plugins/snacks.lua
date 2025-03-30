@@ -26,5 +26,7 @@ return {
     vim.keymap.set("n", "<leader>lg", function() Snacks.lazygit.open(opts) end, { desc = "Open Lazygit" })
     ---@diagnostic disable-next-line: undefined-global
     vim.keymap.set("n", "<leader>gb", function() Snacks.gitbrowse() end, { desc = "Gitbrowse" })
+    ---@diagnostic disable-next-line: undefined-global
+    vim.keymap.set("n", "<leader>nh", function() Snacks.notifier.show_history() end, { desc = "Notifier history" })
   end
 }
