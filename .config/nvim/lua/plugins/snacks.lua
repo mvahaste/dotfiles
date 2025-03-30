@@ -1,6 +1,6 @@
 return {
   "folke/snacks.nvim",
-  friority = 1000,
+  friority = 2500,
   lazy = false,
   opts = {
     -- your configuration comes here
