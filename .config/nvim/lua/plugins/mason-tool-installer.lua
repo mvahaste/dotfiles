@@ -12,7 +12,6 @@ return {
         "typescript-language-server",
         "tailwindcss-language-server",
         "vue-language-server",
-        "eslint-lsp",
         "taplo",
         "pyright",
         "clangd",
