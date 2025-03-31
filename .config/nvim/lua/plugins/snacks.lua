@@ -14,6 +14,7 @@ return {
     -- indent = { enabled = true },
     input = { enabled = true },
     -- picker = { enabled = true },
+    notify = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
@@ -22,11 +23,12 @@ return {
     words = { enabled = true },
   },
   config = function()
-    ---@diagnostic disable-next-line: undefined-global
-    vim.keymap.set("n", "<leader>lg", function() Snacks.lazygit.open(opts) end, { desc = "Open Lazygit" })
-    ---@diagnostic disable-next-line: undefined-global
+    local Snacks = require("snacks")
+
+    vim.notify = Snacks.notifier
+
+    vim.keymap.set("n", "<leader>lg", function() Snacks.lazygit.open() end, { desc = "Open Lazygit" })
     vim.keymap.set("n", "<leader>gb", function() Snacks.gitbrowse() end, { desc = "Gitbrowse" })
-    ---@diagnostic disable-next-line: undefined-global
     vim.keymap.set("n", "<leader>nh", function() Snacks.notifier.show_history() end, { desc = "Notifier history" })
   end
 }
