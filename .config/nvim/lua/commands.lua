@@ -1,3 +1,4 @@
+-- Create .prettierrc
 local prettierrc = [[
 {
   "printWidth": 80,
@@ -29,4 +30,22 @@ vim.api.nvim_create_user_command(
   "CreatePrettierrc",
   CreatePrettierrc,
   { desc = "Creates a base .prettierrc file in the project root" }
+)
+
+-- Function to add "use client"; to the top of the current buffer
+function UseClient()
+  -- Get the current buffer number
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  -- Insert "use client"; at the beginning of the buffer
+  vim.api.nvim_buf_set_lines(bufnr, 0, 0, true, { "\"use client\";" })
+  -- Create a new empty line after the "use client"; line
+  vim.api.nvim_buf_set_lines(bufnr, 1, 1, true, { "" })
+end
+
+-- Create a user command to call the UseClient function
+vim.api.nvim_create_user_command(
+  "UseClient",
+  UseClient,
+  { desc = "Add \"use client\"; to the top of the current buffer" }
 )

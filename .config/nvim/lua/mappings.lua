@@ -36,5 +36,6 @@ vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<CMD> w <CR>")
 -- Log selection in new line
 vim.keymap.set("v", "<leader>l", "yoconsole.log(\"<ESC>pa:\", <ESC>pa);<ESC>", { desc = "console.log() selection" })
 
--- Telescope notify
-vim.keymap.set("n", "<leader>n", "<CMD>Telescope notify<CR>", { desc = "Telescope notify" })
+-- Add "use client"; to the top of the current buffer
+vim.keymap.set("n", "<leader>cuc", "<CMD>UseClient<CR>",
+  { desc = "Add \"use client\"; to the top of the current buffer" })
