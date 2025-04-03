@@ -111,18 +111,28 @@ function crjava() {
   fi
 }
 
-# Rename directories to "Chapter XXX" format
+# Rename directories to "Chapter XXX" format with optional quiet mode
 function rename_chapters() {
-  if [ -z "$1" ] || [ "$1" = "-h" ]; then
+  if [[ -z "$1" || "$1" == "-h" || "$1" == "--help" ]]; then
     echo "Rename directories to 'Chapter XXX' format"
-    echo "Usage: rename_chapters <directory> [padding_length]"
+    echo "Usage: rename_chapters <directory> [padding_length] [-q|--quiet]"
+    echo "  <directory>        Directory containing folders to rename"
+    echo "  [padding_length]   Number of digits for chapter number (default: 3)"
+    echo "  -q, --quiet        Suppress RENAMING messages"
     return 1
   fi
 
   local dir="$1"
   local padding_length="${2:-3}"
+  local quiet_mode=0
+  local renames=0 skips=0 errors=0
 
-  if [ ! -d "$dir" ]; then
+  # Check for -q or --quiet as the last argument
+  if [[ "${@: -1}" == "-q" || "${@: -1}" == "--quiet" ]]; then
+    quiet_mode=1
+  fi
+
+  if [[ ! -d "$dir" ]]; then
     echo "ERROR: Directory '$dir' does not exist."
     return 1
   fi
@@ -131,35 +141,47 @@ function rename_chapters() {
     local dir_name="${d%/}"
     local base_name=$(basename "$dir_name")
 
-    # Extract last occurring number 
+    # Extract last occurring number
     local chapter_number=$(echo "$base_name" | grep -o '[0-9]\+' | tail -n 1)
 
     # Check if chapter number is found
-    if [ -z "$chapter_number" ]; then
+    if [[ -z "$chapter_number" ]]; then
       echo "SKIPPING: '$base_name' (no number found)"
+      ((skips++))
       continue
     fi
 
-    # Check if chapter number is valid
+    # Format chapter number
     local formatted_chapter_number=$(printf "%0${padding_length}d" "$chapter_number")
     local new_dir_name="$dir/Chapter $formatted_chapter_number"
 
-    # Check if the directory is already in the desired format
-    if [ "$dir_name" = "$new_dir_name" ]; then
+    # Skip if already formatted
+    if [[ "$dir_name" == "$new_dir_name" ]]; then
       echo "SKIPPING: '$base_name' (already formatted)"
+      ((skips++))
       continue
     fi
 
-    # Check if the target directory already exists
-    if [ -d "$new_dir_name" ]; then
+    # Skip if target directory exists
+    if [[ -d "$new_dir_name" ]]; then
       echo "ERROR: Target directory '$new_dir_name' already exists. Skipping '$base_name'."
+      ((errors++))
       continue
     fi
 
-    # Rename the directory
-    echo "RENAMING: '$base_name' -> 'Chapter $formatted_chapter_number'"
-    mv "$dir_name" "$new_dir_name" || echo "ERROR: Failed to rename '$base_name'"
+    # Rename directory
+    mv "$dir_name" "$new_dir_name" 2>/dev/null
+    if [[ $? -eq 0 ]]; then
+      ((renames++))
+      [[ $quiet_mode -eq 0 ]] && echo "RENAMED: '$base_name' -> 'Chapter $formatted_chapter_number'"
+    else
+      echo "ERROR: Failed to rename '$base_name'"
+      ((errors++))
+    fi
   done
+
+  # Print Summary
+  echo "DONE: $renames renamed, $skips skipped, $errors errors."
 }
 
 # Shell integrations
