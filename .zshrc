@@ -116,23 +116,24 @@ function rename_chapters() {
   if [[ -z "$1" || "$1" == "-h" || "$1" == "--help" ]]; then
     echo "Rename directories to 'Chapter XXX' format"
     echo "Usage: rename_chapters <directory> [padding_length] [-q|--quiet]"
-    echo "  <directory>        Directory containing folders to rename"
-    echo "  [padding_length]   Number of digits for chapter number (default: 3)"
-    echo "  -q, --quiet        Suppress RENAMING messages"
     return 1
   fi
 
-  local dir="$1"
-  local padding_length="${2:-3}"
+  local dir=""
+  local padding_length=3
   local quiet_mode=0
   local renames=0 skips=0 errors=0
 
-  # Check for -q or --quiet as the last argument
-  if [[ "${@: -1}" == "-q" || "${@: -1}" == "--quiet" ]]; then
-    quiet_mode=1
-  fi
+  # Parse arguments correctly
+  for arg in "$@"; do
+    case "$arg" in
+      -q|--quiet) quiet_mode=1 ;;
+      [0-9]*) padding_length="$arg" ;;  # Ensure padding_length is a number
+      *) dir="$arg" ;;  # Assume anything else is the directory
+    esac
+  done
 
-  if [[ ! -d "$dir" ]]; then
+  if [[ -z "$dir" || ! -d "$dir" ]]; then
     echo "ERROR: Directory '$dir' does not exist."
     return 1
   fi
@@ -151,7 +152,7 @@ function rename_chapters() {
       continue
     fi
 
-    # Format chapter number
+    # Format chapter number correctly
     local formatted_chapter_number=$(printf "%0${padding_length}d" "$chapter_number")
     local new_dir_name="$dir/Chapter $formatted_chapter_number"
 
@@ -181,7 +182,7 @@ function rename_chapters() {
   done
 
   # Print Summary
-  echo "DONE: $renames renamed, $skips skipped, $errors errors."
+  echo "Summary: $renames renamed, $skips skipped, $errors errors."
 }
 
 # Shell integrations
