@@ -111,6 +111,57 @@ function crjava() {
   fi
 }
 
+# Rename directories to "Chapter XXX" format
+function rename_chapters() {
+  if [ -z "$1" ] || [ "$1" = "-h" ]; then
+    echo "Rename directories to 'Chapter XXX' format"
+    echo "Usage: rename_chapters <directory> [padding_length]"
+    return 1
+  fi
+
+  local dir="$1"
+  local padding_length="${2:-3}"
+
+  if [ ! -d "$dir" ]; then
+    echo "ERROR: Directory '$dir' does not exist."
+    return 1
+  fi
+
+  for d in "$dir"/*/; do
+    local dir_name="${d%/}"
+    local base_name=$(basename "$dir_name")
+
+    # Extract last occurring number 
+    local chapter_number=$(echo "$base_name" | grep -o '[0-9]\+' | tail -n 1)
+
+    # Check if chapter number is found
+    if [ -z "$chapter_number" ]; then
+      echo "SKIPPING: '$base_name' (no number found)"
+      continue
+    fi
+
+    # Check if chapter number is valid
+    local formatted_chapter_number=$(printf "%0${padding_length}d" "$chapter_number")
+    local new_dir_name="$dir/Chapter $formatted_chapter_number"
+
+    # Check if the directory is already in the desired format
+    if [ "$dir_name" = "$new_dir_name" ]; then
+      echo "SKIPPING: '$base_name' (already formatted)"
+      continue
+    fi
+
+    # Check if the target directory already exists
+    if [ -d "$new_dir_name" ]; then
+      echo "ERROR: Target directory '$new_dir_name' already exists. Skipping '$base_name'."
+      continue
+    fi
+
+    # Rename the directory
+    echo "RENAMING: '$base_name' -> 'Chapter $formatted_chapter_number'"
+    mv "$dir_name" "$new_dir_name" || echo "ERROR: Failed to rename '$base_name'"
+  done
+}
+
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init --cmd cd zsh)"
