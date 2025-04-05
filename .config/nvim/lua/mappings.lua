@@ -37,5 +37,5 @@ vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<CMD> w <CR>")
 vim.keymap.set("v", "<leader>l", "yoconsole.log(\"<ESC>pa:\", <ESC>pa);<ESC>", { desc = "console.log() selection" })
 
 -- Add "use client"; to the top of the current buffer
-vim.keymap.set("n", "<leader>cuc", "<CMD>UseClient<CR>",
+vim.keymap.set("n", "<leader>cc", "<CMD>UseClient<CR>",
   { desc = "Add \"use client\"; to the top of the current buffer" })
