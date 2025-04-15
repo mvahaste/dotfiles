@@ -3,8 +3,30 @@
 # Clone dotfiles
 git clone --depth 1 https://github.com/mvahaste/dotfiles.git ~/dotfiles
 
-# Install dependencies
-brew install stow zsh tmux unzip ripgrep gh nodejs npm neovim lazygit zoxide fzf glow pngpaste black maven tldr
+# System & shell utilities
+brew install \
+  stow \           # symlink manager for dotfiles
+  zsh \            # shell
+  tmux \           # terminal multiplexer
+  unzip \          # archive utility
+
+# Dev tools & languages
+brew install \
+  nodejs \         # JavaScript runtime
+  npm \            # package manager for Node
+  maven \          # Java build tool
+  black \          # Python code formatter
+
+# Terminal, text editor & CLI tools
+brew install \
+  alacritty \      # GPU-accelerated terminal
+  neovim \         # modern Vim
+  lazygit \        # terminal UI for Git
+  tldr \           # simplified man pages
+  fzf \            # fuzzy finder
+  ripgrep \        # fast grep alternative
+  zoxide \         # smarter cd command
+  gh               # GitHub CLI
 
 # Set up global npm directory
 mkdir -p ~/.npm-global
