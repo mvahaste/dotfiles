@@ -79,6 +79,7 @@ zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --git"
 alias n="nvim"
 alias lg="lazygit"
+alias gitop="open \"$(git remote -v | tail -n 1 | awk '{ print $2 }')\""
 
 # Functions
 # Compile and run C++ files
