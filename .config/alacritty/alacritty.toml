@@ -18,7 +18,7 @@ opacity = 0.45
 blur = true
 option_as_alt = "Both"
 dynamic_padding = true
-padding = { x = 8, y = 8 }
+padding = { x = 10, y = 8 }
 
 [font]
 size = 13
