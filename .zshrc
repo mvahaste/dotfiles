@@ -79,8 +79,14 @@ zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --git"
 alias n="nvim"
 alias lg="lazygit"
+alias fzf="fzf --preview 'bat --theme=gruvbox-dark --style=numbers --color=always {}'"
 
 # Functions
+# Fuzzy find a file in the current directory and open it with nvim
+function fzfn() {
+  nvim "$(fzf)"
+}
+
 # Compile and run C++ files
 function crcpp() {
   if [ -z "$1" ] || [ "$1" = "-h" ]; then
