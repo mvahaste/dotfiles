@@ -14,7 +14,7 @@ import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 
 [window]
 decorations = "buttonless"
-opacity = 0.45
+opacity = 0.35
 blur = true
 option_as_alt = "Both"
 dynamic_padding = true
