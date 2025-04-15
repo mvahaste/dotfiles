@@ -24,6 +24,7 @@ brew install \
   lazygit \        # terminal UI for Git
   tldr \           # simplified man pages
   fzf \            # fuzzy finder
+  eza \            # modern ls replacement
   ripgrep \        # fast grep alternative
   zoxide \         # smarter cd command
   gh               # GitHub CLI

@@ -76,7 +76,7 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 
 # Aliases
-alias ls="ls --color"
+alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --git"
 alias n="nvim"
 alias lg="lazygit"
 
