@@ -200,7 +200,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "/Users/mvahaste/.deno/env"
 
-# Start kitty with tmux
-# if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
-#   tmux attach -t main || tmux new -s main
-# fi
