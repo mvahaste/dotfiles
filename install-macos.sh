@@ -29,6 +29,10 @@ brew install \
   zoxide \         # smarter cd command
   gh               # GitHub CLI
 
+brew install \
+  font-jetbrains-mono \ # JetBrains Mono font
+  font-jetbrains-mono-nerd-font \ # Nerd Font version of JetBrains Mono
+
 # Set up global npm directory
 mkdir -p ~/.npm-global
 npm config set prefix "~/.npm-global"
