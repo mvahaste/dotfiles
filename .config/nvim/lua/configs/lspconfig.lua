@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "ts_ls", "tailwindcss", "volar", "taplo", "pyright" }
+local servers = { "html", "cssls", "ts_ls", "tailwindcss", "volar", "astro", "taplo", "pyright" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -27,5 +27,5 @@ lspconfig.clangd.setup {
   cmd = {
     "clangd",
     "--offset-encoding=utf-16",
-  }
+  },
 }

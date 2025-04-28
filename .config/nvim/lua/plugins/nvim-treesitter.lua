@@ -19,6 +19,7 @@ return {
       "bash",
       "python",
       "cpp",
+      "astro",
     },
   },
 }

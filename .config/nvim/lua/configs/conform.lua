@@ -10,6 +10,7 @@ local options = {
     javascriptreact = { "prettierd" },
     typescript = { "prettierd" },
     typescriptreact = { "prettierd" },
+    astro = { "prettierd" },
     markdown = { "prettierd" },
     python = { "black" },
     cpp = { "clang-format" },
