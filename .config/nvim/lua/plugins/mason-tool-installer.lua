@@ -12,7 +12,6 @@ return {
         "typescript-language-server",
         "tailwindcss-language-server",
         "vue-language-server",
-        "astro-language-server",
         "taplo",
         "pyright",
         "clangd",
