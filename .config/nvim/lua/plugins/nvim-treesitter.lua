@@ -1,5 +1,12 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  config = function()
+    require("nvim-treesitter.configs").setup {
+      highlight = {
+        disable = { "latex" },
+      },
+    }
+  end,
   opts = {
     ensure_installed = {
       "vim",
