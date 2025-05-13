@@ -31,6 +31,10 @@ brew install --cask nikitabobko/tap/aerospace
 mkdir -p ~/.npm-global
 npm config set prefix "~/.npm-global"
 
+# Install global npm packages
+npm install -g @vue/language-server
+npm install -g @vue/typescript-plugin
+
 # Install tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
