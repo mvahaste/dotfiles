@@ -355,6 +355,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.82989895343780518
   },
+  "Unicode Normalization" : 0,
   "Ansi 2 Color (Dark)" : {
     "Red Component" : 0.52591603994369507,
     "Color Space" : "Calibrated",
@@ -518,7 +519,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.7607843279838562
   },
-  "Normal Font" : "CascadiaCodeNF-Regular_SemiBold 13",
+  "Normal Font" : "JetBrainsMonoNF-Medium 13",
   "Unlimited Scrollback" : false,
   "Ansi 12 Color (Light)" : {
     "Red Component" : 0.44289660453796387,
