@@ -21,8 +21,16 @@ brew install \
   eza \                             # modern ls replacement
   ripgrep \                         # fast grep alternative
   zoxide \                          # smarter cd command
+
+# Install fonts
+brew install \
+  font-lora \                       # a nice looking serif font
   font-jetbrains-mono \             # jetbrains mono font
   font-jetbrains-mono-nerd-font \   # nerd font version of jetbrains mono
+  font-cascadia-code \              # cascadia code font
+  font-cascadia-code-nf \           # nerd font version of cascadia code
+  font-atkinson-hyperlegible \      # atkinson hyperlegible font, I am blind
+  font-atkinson-hyperlegible-mono \ # mono version of atkinson hyperlegible
 
 # Tiling window manager
 brew install --cask nikitabobko/tap/aerospace
