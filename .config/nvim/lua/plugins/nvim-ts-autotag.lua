@@ -5,6 +5,7 @@ return {
     "javascriptreact",
     "typescript",
     "typescriptreact",
+    "vue",
     "html",
   },
   config = function()

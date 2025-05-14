@@ -31,6 +31,8 @@ brew install \
   font-cascadia-code-nf \           # nerd font version of cascadia code
   font-atkinson-hyperlegible \      # atkinson hyperlegible font, I am blind
   font-atkinson-hyperlegible-mono \ # mono version of atkinson hyperlegible
+  font-geist-mono \                 # geist mono font
+  font-geist-mono-nerd-font \       # nerd font version of geist mono
 
 # Tiling window manager
 brew install --cask nikitabobko/tap/aerospace
