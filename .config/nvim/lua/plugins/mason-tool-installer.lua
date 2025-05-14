@@ -17,6 +17,8 @@ return {
         "clangd",
         "clang-format",
         "codelldb",
+        "tinymist",
+        "typstyle",
       },
       auto_update = true,
       run_on_start = true,

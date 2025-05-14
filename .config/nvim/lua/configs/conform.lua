@@ -14,6 +14,7 @@ local options = {
     markdown = { "prettierd" },
     python = { "black" },
     cpp = { "clang-format" },
+    typst = { "typstyle" },
   },
 
   format_on_save = {

@@ -26,6 +26,7 @@ return {
       "bash",
       "python",
       "cpp",
+      "typst",
     },
   },
 }
