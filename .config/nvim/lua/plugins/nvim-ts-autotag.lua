@@ -7,6 +7,7 @@ return {
     "typescriptreact",
     "vue",
     "html",
+    "markdown",
   },
   config = function()
     require("nvim-ts-autotag").setup()

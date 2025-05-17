@@ -1,16 +1,18 @@
-if true then return {} end;
+if true then
+  return {}
+end
 
 return {
   "OXY2DEV/markview.nvim",
   -- lazy = false,
   ft = "markdown",
   config = function()
-    local presets = require("markview.presets");
+    local presets = require "markview.presets"
 
-    require("markview").setup({
+    require("markview").setup {
       markdown = {
-        headings = presets.headings.glow
-      }
-    });
-  end
-};
+        headings = presets.headings.glow,
+      },
+    }
+  end,
+}

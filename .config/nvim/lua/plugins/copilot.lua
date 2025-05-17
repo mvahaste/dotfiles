@@ -17,9 +17,10 @@ return {
           end
           return true
         end,
-      }
+      },
     }
-    vim.keymap.set("i", "<M-i>", function() require("copilot.suggestion").accept() end,
-      { noremap = true, silent = true, desc = "Accept Copilot suggestion" })
+    vim.keymap.set("i", "<M-i>", function()
+      require("copilot.suggestion").accept()
+    end, { noremap = true, silent = true, desc = "Accept Copilot suggestion" })
   end,
 }

@@ -23,12 +23,18 @@ return {
     words = { enabled = true },
   },
   config = function()
-    local Snacks = require("snacks")
+    local Snacks = require "snacks"
 
     vim.notify = Snacks.notifier
 
-    vim.keymap.set("n", "<leader>lg", function() Snacks.lazygit.open() end, { desc = "Open Lazygit" })
-    vim.keymap.set("n", "<leader>gb", function() Snacks.gitbrowse() end, { desc = "Gitbrowse" })
-    vim.keymap.set("n", "<leader>nh", function() Snacks.notifier.show_history() end, { desc = "Notifier history" })
-  end
+    vim.keymap.set("n", "<leader>lg", function()
+      Snacks.lazygit.open()
+    end, { desc = "Open Lazygit" })
+    vim.keymap.set("n", "<leader>gb", function()
+      Snacks.gitbrowse()
+    end, { desc = "Gitbrowse" })
+    vim.keymap.set("n", "<leader>nh", function()
+      Snacks.notifier.show_history()
+    end, { desc = "Notifier history" })
+  end,
 }
