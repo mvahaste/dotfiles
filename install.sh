@@ -35,10 +35,6 @@ brew install \
 # Tiling window manager
 brew install --cask nikitabobko/tap/aerospace
 
-# Set up global npm directory
-mkdir -p ~/.npm-global
-npm config set prefix "~/.npm-global"
-
 # Install global npm packages
 npm install -g @vue/language-server
 npm install -g @vue/typescript-plugin
