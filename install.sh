@@ -8,8 +8,7 @@ brew install \
   zsh \                             # shell
   tmux \                            # terminal multiplexer
   unzip \                           # archive utility
-  nodejs \                          # javascript runtime
-  npm \                             # package manager for node
+  nvm \                             # node version manager
   maven \                           # java build tool
   black \                           # python code formatter
   gh                                # github CLI
@@ -35,15 +34,15 @@ brew install \
 # Tiling window manager
 brew install --cask nikitabobko/tap/aerospace
 
+# Install node
+nvm install --lts
+
 # Install global npm packages
 npm install -g @vue/language-server
 npm install -g @vue/typescript-plugin
 
 # Install tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Install deno
-curl -fsSL https://deno.land/install.sh | sh
 
 # Set git name and email
 if [ $USER = "mvahaste" ]; then
