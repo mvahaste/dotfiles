@@ -133,3 +133,8 @@ end, { desc = "telescope workspace symbols" })
 vim.keymap.set("n", "<leader>fr", function()
   telescope_builtin.lsp_references()
 end, { desc = "telescope references" })
+
+-- markdown-preview.nvim
+vim.keymap.set("n", "<leader>mp", function()
+  vim.cmd "MarkdownPreviewToggle"
+end, { desc = "Markdown preview" })
