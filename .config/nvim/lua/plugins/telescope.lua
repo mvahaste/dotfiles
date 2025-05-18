@@ -48,5 +48,8 @@ return {
         },
       }
     end, { desc = "telescope workspace symbols" })
+    vim.keymap.set("n", "<leader>fr", function()
+      require("telescope.builtin").lsp_references()
+    end, { desc = "telescope references" })
   end,
 }
