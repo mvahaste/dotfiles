@@ -1,20 +1,17 @@
 local options = {
   formatters_by_ft = {
+    markdown = { "prettierd" },
     lua = { "stylua" },
     css = { "prettierd" },
     html = { "prettierd" },
     json = { "prettierd" },
     toml = { "taplo" },
     yml = { "prettierd" },
+    python = { "black" },
     javascript = { "prettierd" },
     javascriptreact = { "prettierd" },
     typescript = { "prettierd" },
     typescriptreact = { "prettierd" },
-    vue = { "prettierd" },
-    markdown = { "prettierd" },
-    python = { "black" },
-    cpp = { "clang-format" },
-    typst = { "typstyle" },
   },
 
   format_on_save = {

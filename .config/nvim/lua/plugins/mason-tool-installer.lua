@@ -7,7 +7,6 @@ return {
         "html-lsp",
         "css-lsp",
         "json-lsp",
-        "clang-format",
         "taplo",
         "pyright",
         "black",
