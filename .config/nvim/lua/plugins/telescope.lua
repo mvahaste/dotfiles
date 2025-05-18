@@ -14,42 +14,5 @@ return {
       },
     }
     require("telescope").load_extension "ui-select"
-    vim.keymap.set("n", "<leader>fs", function()
-      require("telescope.builtin").lsp_document_symbols {
-        symbols = {
-          "class",
-          "variable",
-          "constant",
-          "function",
-          "method",
-          "constructor",
-          "module",
-          "interface",
-          "enum",
-          "namespace",
-          "struct",
-        },
-      }
-    end, { desc = "telescope document symbols" })
-    vim.keymap.set("n", "<leader>fS", function()
-      require("telescope.builtin").lsp_workspace_symbols {
-        symbols = {
-          "class",
-          "variable",
-          "constant",
-          "function",
-          "method",
-          "constructor",
-          "module",
-          "interface",
-          "enum",
-          "namespace",
-          "struct",
-        },
-      }
-    end, { desc = "telescope workspace symbols" })
-    vim.keymap.set("n", "<leader>fr", function()
-      require("telescope.builtin").lsp_references()
-    end, { desc = "telescope references" })
   end,
 }
