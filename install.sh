@@ -9,6 +9,7 @@ brew install \
   tmux \                            # terminal multiplexer
   unzip \                           # archive utility
   nvm \                             # node version manager
+  yarn \                            # package manager
   maven \                           # java build tool
   black \                           # python code formatter
   gh                                # github CLI
