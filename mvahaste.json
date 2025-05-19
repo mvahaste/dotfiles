@@ -87,15 +87,16 @@
     "Alpha Component" : 1,
     "Green Component" : 0.2891082763671875
   },
+  "Cursor Type" : 2,
+  "Keyboard Map" : {
+
+  },
   "Ansi 3 Color (Dark)" : {
     "Red Component" : 0.80126690864562988,
     "Color Space" : "Calibrated",
     "Blue Component" : 0.10328958928585052,
     "Alpha Component" : 1,
     "Green Component" : 0.53254079818725586
-  },
-  "Keyboard Map" : {
-
   },
   "Visual Bell" : true,
   "Only The Default BG Color Uses Transparency" : true,
@@ -151,6 +152,7 @@
   },
   "Silence Bell" : false,
   "Rows" : 25,
+  "Draw Powerline Glyphs" : false,
   "Guid" : "366A1553-62F4-4D98-8DFF-1866CA968D8A",
   "Ansi 14 Color (Dark)" : {
     "Red Component" : 0.49072420597076416,
@@ -256,11 +258,11 @@
   },
   "Custom Command" : "No",
   "Background Color (Dark)" : {
-    "Red Component" : 0,
+    "Red Component" : 0.058095671236515045,
     "Color Space" : "P3",
-    "Blue Component" : 0,
+    "Blue Component" : 0.057074576616287231,
     "Alpha Component" : 1,
-    "Green Component" : 0
+    "Green Component" : 0.057095177471637726
   },
   "Ansi 9 Color" : {
     "Red Component" : 0.8659515380859375,
@@ -306,6 +308,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.69061970710754395
   },
+  "Animate Movement" : false,
   "Non-ASCII Anti Aliased" : true,
   "Ansi 10 Color" : {
     "Red Component" : 0.3450070321559906,
@@ -329,6 +332,7 @@
     "Green Component" : 0.28100395202636719
   },
   "Description" : "Default",
+  "Blink Allowed" : true,
   "Ansi 7 Color (Dark)" : {
     "Red Component" : 0.5926094651222229,
     "Color Space" : "Calibrated",
@@ -345,9 +349,9 @@
     "Green Component" : 0.23660069704055786
   },
   "Name" : "mvahaste",
-  "Transparency" : 0.5499441964285714,
+  "Transparency" : 0.080000000000000002,
   "Horizontal Spacing" : 1,
-  "Thin Strokes" : 4,
+  "Thin Strokes" : 0,
   "Cursor Color (Dark)" : {
     "Red Component" : 0.90061241388320923,
     "Color Space" : "Calibrated",
@@ -519,7 +523,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.7607843279838562
   },
-  "Normal Font" : "JetBrainsMonoNF-Medium 13",
+  "Normal Font" : "0xProtoNF-Regular 13",
   "Unlimited Scrollback" : false,
   "Ansi 12 Color (Light)" : {
     "Red Component" : 0.44289660453796387,
