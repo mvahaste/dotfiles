@@ -10,6 +10,8 @@ return {
         "taplo",
         "pyright",
         "black",
+        "isort",
+        "pylint",
         "lua-language-server",
         "typescript-language-server",
         "tailwindcss-language-server",
