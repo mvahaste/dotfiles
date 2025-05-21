@@ -179,15 +179,6 @@ if.window-title-regex-substring = "Media Viewer"
 run = "layout floating"
 
 [[on-window-detected]]
-if.app-id = "com.jetbrains.jbr.java"
-if.window-title-regex-substring = "dendroloj"
-run = "layout floating"
-
-[[on-window-detected]]
-if.window-title-regex-substring = "Sales system"
-run = "layout floating"
-
-[[on-window-detected]]
 if.app-id = "com.colliderli.iina"
 run = "layout floating"
 
