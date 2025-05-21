@@ -205,3 +205,7 @@ run = "layout floating"
 if.app-id = "org.eduvpn.app"
 if.window-title-regex-substring = "eduVPN"
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "tech.median.Tomato2"
+run = "layout floating"
