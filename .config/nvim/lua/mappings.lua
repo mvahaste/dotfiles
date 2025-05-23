@@ -15,7 +15,7 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 -- ╰─────────────────────────────────────────────────────────╯
 
 -- Command Mode Shortcut
--- vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
+vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 
 -- Escape Insert Mode
 vim.keymap.set("i", "jk", "<ESC>")
