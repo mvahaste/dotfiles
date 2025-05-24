@@ -349,7 +349,7 @@
     "Green Component" : 0.23660069704055786
   },
   "Name" : "mvahaste",
-  "Transparency" : 0.078130580357142862,
+  "Transparency" : 0.14999999999999997,
   "Horizontal Spacing" : 1,
   "Thin Strokes" : 0,
   "Cursor Color (Dark)" : {
@@ -523,7 +523,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.7607843279838562
   },
-  "Normal Font" : "0xProtoNF-Regular 13",
+  "Normal Font" : "JetBrainsMonoNF-Regular 13",
   "Unlimited Scrollback" : false,
   "Ansi 12 Color (Light)" : {
     "Red Component" : 0.44289660453796387,
