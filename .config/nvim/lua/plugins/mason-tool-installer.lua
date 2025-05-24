@@ -12,6 +12,8 @@ return {
         "black",
         "isort",
         "pylint",
+        "rust-analyzer",
+        "codelldb",
         "lua-language-server",
         "typescript-language-server",
         "tailwindcss-language-server",

@@ -8,6 +8,7 @@ return {
       "bash",
       "lua",
       "python",
+      "rust",
       "html",
       "css",
       "json",

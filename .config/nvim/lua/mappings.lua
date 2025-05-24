@@ -39,7 +39,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>o", "o<Esc>k", { desc = "New line below" })
 vim.keymap.set("n", "<leader>O", "O<Esc>j", { desc = "New line above" })
 
--- Leader w/q to save/quit
+-- leader w/q to save/quit
 vim.keymap.set("n", "<leader>w", "<CMD>w<CR>", { desc = "Save" })
 vim.keymap.set("n", "<leader>q", "<CMD>q<CR>", { desc = "Quit" })
 
@@ -68,8 +68,8 @@ vim.keymap.set("n", "<leader>cc", "<CMD>UseClient<CR>", {
 vim.keymap.set("n", "<leader>i", "<CMD>ToggleAlternate<CR>", { desc = "Toggle boolean" })
 
 -- comment-box.nvim
-vim.keymap.set("n", "<leader>cb", "<cmd>CBlcbox<cr>", { desc = "Comment Box" })
-vim.keymap.set("v", "<leader>cb", "<cmd>CBlcbox<cr>", { desc = "Comment Box" })
+vim.keymap.set("n", "<leader>cb", "<CMD>CBlcbox<CR>", { desc = "Comment Box" })
+vim.keymap.set("v", "<leader>cb", "<CMD>CBlcbox<CR>", { desc = "Comment Box" })
 
 -- copilot.lua
 vim.keymap.set("i", "<M-i>", function()
@@ -148,3 +148,26 @@ end, { desc = "telescope references" })
 vim.keymap.set("n", "<leader>mp", function()
   vim.cmd "MarkdownPreviewToggle"
 end, { desc = "Markdown preview" })
+
+-- nvim-dap
+vim.keymap.set("n", "<leader>di", "<CMD>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
+vim.keymap.set("n", "<leader>do", "<CMD>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
+vim.keymap.set("n", "<leader>dO", "<CMD>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
+vim.keymap.set("n", "<leader>dc", "<CMD>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
+vim.keymap.set(
+  "n",
+  "<leader>db",
+  "<CMD>lua require'dap'.toggle_breakpoint()<CR>",
+  { desc = "Debugger toggle breakpoint" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>dB",
+  "<CMD>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+  { desc = "Debugger set conditional breakpoint" }
+)
+vim.keymap.set("n", "<leader>dR", "<CMD>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
+vim.keymap.set("n", "<leader>dr", "<CMD>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
+
+-- rustaceanvim
+vim.keymap.set("n", "<leader>dt", "<CMD>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
