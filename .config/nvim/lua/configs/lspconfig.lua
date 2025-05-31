@@ -16,6 +16,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- gdscript
+require "configs.gdscript"
+
 -- c++
 -- lspconfig.clangd.setup {
 --   on_attach = function(client, bufnr)
