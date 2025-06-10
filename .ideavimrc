@@ -1,0 +1,52 @@
+" Settings
+set scrolloff=10
+set incsearch
+set showcmd
+set visualbell
+set clipboard=unnamedplus
+
+" Map
+map Q gq
+map U <C-R>
+nnoremap J gT
+nnoremap K gt
+
+" Action map
+nnoremap /  :action Find<CR>
+nnoremap zr :action Run<CR>
+nnoremap zs :action Stop<CR>
+nnoremap zd :action Debug<CR>
+
+" Leader map
+let mapleader=' '
+noremap <Leader>rc :e ~/.ideavimrc<CR>
+noremap <Leader>s :source ~/.ideavimrc<CR>
+noremap <Leader>q :q<CR>
+noremap <Leader>y "+y<CR>
+noremap <Leader>p "+p<CR>
+
+" IDEA action
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>im :action ImplementMethods<CR>
+nnoremap <Leader>rv :action IntroduceVariable<CR>
+nnoremap <Leader>cr :action CopyReference<CR>
+nnoremap <Leader>em :action ExtractMethod<CR>
+nnoremap <Leader>sw :action SurroundWith<CR>
+
+" ----------- Plugins -----------
+" Highlight copied text
+set highlightedyank
+" Commentary plugin
+set commentary
+" Text-object 'a' argument
+set argtextobj
+" Simpler motions, install Vim EasyMotion and AceJump plugins
+set easymotion
+" Text objects for functions, install Vim FunctionTextObj plugin
+set functiontextobj
+" Easily change surroundings
+set surround
+" Display available keybindings
+set which-key
