@@ -8,8 +8,8 @@ set clipboard=unnamedplus
 " Map
 map Q gq
 map U <C-R>
-nnoremap J gT
-nnoremap K gt
+nnoremap <S-Tab> gT
+nnoremap <Tab> gt
 
 " Action map
 nnoremap /  :action Find<CR>
