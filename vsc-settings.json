@@ -20,7 +20,7 @@
   "editor.smoothScrolling": true,
   "editor.colorDecorators": true,
   "editor.lightbulb.enabled": "off",
-  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.enabled": false,
   "editor.linkedEditing": true,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.occurrencesHighlight": "off",
@@ -124,6 +124,8 @@
   "window.density.editorTabHeight": "compact",
   "window.commandCenter": false,
   "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.symbolPath": "on",
   "symbols.hidesExplorerArrows": true,
 
   // =========================
