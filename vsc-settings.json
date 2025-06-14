@@ -35,6 +35,8 @@
   "editor.formatOnPaste": true,
   "editor.cursorSurroundingLines": 10,
   "editor.multiCursorModifier": "ctrlCmd",
+  "window.restoreWindows": "all",
+  "zenMode.fullScreen": false,
 
   // =========================
   // FILES & FORMATTING
@@ -161,6 +163,10 @@
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.smartRelativeLine": true,
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.sneak": true,
+  "vim.camelCaseMotion.enable": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "f", "f"],
@@ -183,20 +189,16 @@
       "commands": ["workbench.action.previousEditorInGroup"]
     },
     {
-      "before": ["<leader>", "s"],
-      "commands": [":vsp"]
+      "before": ["g", "d"],
+      "commands": ["editor.action.goToDeclaration"]
     },
     {
-      "before": ["<leader>", "g", "d"],
-      "commands": ["editor.action.goToDeclaration"]
+      "before": ["g", "h"],
+      "commands": ["editor.action.showHover"]
     },
     {
       "before": ["<leader>", "c", "a"],
       "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["<leader>", "g", "h"],
-      "commands": ["editor.action.showHover"]
     },
     {
       "before": ["<leader>", "f", "r"],
@@ -215,7 +217,7 @@
       "commands": ["editor.action.peekImplementation"]
     },
     {
-      "before": ["r", "e"],
+      "before": ["<leader>", "r", "e"],
       "commands": ["editor.action.rename"]
     },
     {
@@ -289,6 +291,7 @@
   "errorLens.enabled": true,
   "tailwind-fold.showTailwindImage": false,
   "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.unfoldIfLineSelected": true,
 
   // =========================
   // MARKDOWN & TOC
@@ -376,6 +379,5 @@
       "bold": false,
       "italic": false
     }
-  ],
-  "zenMode.fullScreen": false
+  ]
 }
