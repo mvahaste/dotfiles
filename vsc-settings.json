@@ -9,6 +9,7 @@
   "editor.fontWeight": "500",
   "editor.fontLigatures": true,
   "editor.insertSpaces": true,
+  "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 220,
   "editor.lineNumbers": "relative",
@@ -151,7 +152,8 @@
   "settingsSync.ignoredSettings": ["editor.fontSize", "editor.fontFamily"],
   "settingsSync.ignoredExtensions": [
     "illixion.vscode-vibrancy-continued",
-    "drcika.apc-extension"
+    "drcika.apc-extension",
+    "atlassian.atlascode"
   ],
   "extensions.autoUpdate": "onlyEnabledExtensions",
 
@@ -195,6 +197,11 @@
     {
       "before": ["g", "h"],
       "commands": ["editor.action.showHover"]
+    },
+    {
+      // Show the definition of the symbol under the cursor
+      "before": ["<shift+k>"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
     {
       "before": ["<leader>", "c", "a"],
@@ -283,7 +290,8 @@
     "yaml": false,
     "gdscript": true
   },
-  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.editor.enableCodeActions": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
 
   // =========================
   // OTHER EXTENSIONS
@@ -292,6 +300,7 @@
   "tailwind-fold.showTailwindImage": false,
   "tailwind-fold.foldStyle": "QUOTES",
   "tailwind-fold.unfoldIfLineSelected": true,
+  "redhat.telemetry.enabled": false,
 
   // =========================
   // MARKDOWN & TOC
@@ -309,6 +318,7 @@
   "diffEditor.wordWrap": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
 
   // =========================
   // EXPLORER & UI TWEAKS
@@ -379,5 +389,8 @@
       "bold": false,
       "italic": false
     }
-  ]
+  ],
+  "yaml.schemas": {
+    "file:///Users/mvahaste/.vscode/extensions/atlassian.atlascode-3.8.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  }
 }
