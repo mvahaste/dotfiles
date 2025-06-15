@@ -124,12 +124,15 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.editor.editorActionsLocation": "titleBar",
   "workbench.editor.enablePreview": false,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.tree.enableStickyScroll": false,
   "window.density.editorTabHeight": "compact",
   "window.commandCenter": false,
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+  "window.titleSeparator": " • ",
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "on",
   "breadcrumbs.symbolPath": "on",
-  "symbols.hidesExplorerArrows": true,
 
   // =========================
   // GIT & GITLENS
@@ -173,6 +176,10 @@
     {
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["/"],
+      "commands": ["actions.find"]
     },
     {
       "before": ["<leader>", "/"],
@@ -253,6 +260,10 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["/"],
+      "commands": ["actions.find"]
+    },
     {
       "before": ["<leader>", "/"],
       "commands": ["editor.action.commentLine"]

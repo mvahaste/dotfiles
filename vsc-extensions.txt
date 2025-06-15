@@ -1,8 +1,10 @@
 aaron-bond.better-comments
 adamsome.vscode-theme-gruvbox-minor
+aflo.kanagawa-glass
 akamud.vscode-theme-onedark
 alefragnani.bookmarks
 alefragnani.project-manager
+alexandernanberg.horizon-theme-vscode
 alfish.godot-files
 antfu.theme-vitesse
 atlassian.atlascode
@@ -27,10 +29,13 @@ github.copilot-chat
 github.github-vscode-theme
 github.vscode-pull-request-github
 hideoo.create
+hsnazar.hyper-term-theme
+jackpaget.gruvbox-glass
 jdinhlife.gruvbox
 joelcrosby.one-dark-darker
 jonathanharty.gruvbox-material-icon-theme
 mangeshrex.everblush
+miguelsolorio.fluent-icons
 miguelsolorio.min-theme
 miguelsolorio.symbols
 monish.regexsnippets
@@ -41,6 +46,7 @@ ms-vscode.vscode-typescript-next
 pkief.material-icon-theme
 pmneo.tsimporter
 pulkitgangwar.nextjs-snippets
+qufiwefefwoyn.kanagawa
 quicktype.quicktype
 raunofreiberg.vesper
 redhat.java
