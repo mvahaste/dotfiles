@@ -308,6 +308,8 @@
   // OTHER EXTENSIONS
   // =========================
   "errorLens.enabled": true,
+  "errorLens.messageBackgroundMode": "none",
+  "errorLens.fontStyleItalic": true,
   "tailwind-fold.showTailwindImage": false,
   "tailwind-fold.foldStyle": "QUOTES",
   "tailwind-fold.unfoldIfLineSelected": true,
