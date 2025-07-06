@@ -10,7 +10,7 @@ M.nvdash = {
 }
 
 M.base46 = {
-  theme = "onedark",
+  theme = "chocolate",
   transparency = true,
 }
 
