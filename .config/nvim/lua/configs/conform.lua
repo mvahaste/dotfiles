@@ -12,6 +12,7 @@ local options = {
     javascriptreact = { "prettierd" },
     typescript = { "prettierd" },
     typescriptreact = { "prettierd" },
+    nix = { "alejandra  " },
   },
 
   format_on_save = {
