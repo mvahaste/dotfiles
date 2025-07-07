@@ -60,6 +60,10 @@ vim.keymap.set("n", "<leader>cc", "<CMD>UseClient<CR>", {
   desc = 'Add "use client"; to the top of the current buffer',
 })
 
+-- Resize active window
+vim.keymap.set("n", "+", [[<cmd>vertical resize +5<cr>]], { noremap = true, silent = true })
+vim.keymap.set("n", "_", [[<cmd>vertical resize -5<cr>]], { noremap = true, silent = true })
+
 -- ╭─────────────────────────────────────────────────────────╮
 -- │                         Plugins                         │
 -- ╰─────────────────────────────────────────────────────────╯
@@ -75,6 +79,14 @@ vim.keymap.set("v", "<leader>cb", "<CMD>CBlcbox<CR>", { desc = "Comment Box" })
 vim.keymap.set("i", "<M-i>", function()
   require("copilot.suggestion").accept()
 end, { noremap = true, silent = true, desc = "Accept Copilot suggestion" })
+
+-- copilotchat.lua
+vim.keymap.set(
+  "n",
+  "<leader>ch",
+  "<CMD>CopilotChatToggle<CR>",
+  { noremap = true, silent = true, desc = "Accept Copilot suggestion" }
+)
 
 -- leap.nvim
 vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
