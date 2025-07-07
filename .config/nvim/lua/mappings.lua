@@ -85,7 +85,7 @@ vim.keymap.set(
   "n",
   "<leader>ch",
   "<CMD>CopilotChatToggle<CR>",
-  { noremap = true, silent = true, desc = "Accept Copilot suggestion" }
+  { noremap = true, silent = true, desc = "Open Copilot chat" }
 )
 
 -- leap.nvim
