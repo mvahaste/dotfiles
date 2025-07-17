@@ -12,7 +12,8 @@ M.nvdash = {
     { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
     { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
     { txt = "  Lazygit", keys = "lg", cmd = ":lua require('snacks.lazygit').open()" },
-    { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+    -- { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+    -- { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
   },
 }
 
