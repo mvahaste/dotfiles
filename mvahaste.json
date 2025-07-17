@@ -349,7 +349,7 @@
     "Green Component" : 0.23660069704055786
   },
   "Name" : "mvahaste",
-  "Transparency" : 0.14999999999999997,
+  "Transparency" : 0.49623325892857145,
   "Horizontal Spacing" : 1,
   "Thin Strokes" : 0,
   "Cursor Color (Dark)" : {
@@ -626,5 +626,5 @@
     "Alpha Component" : 1,
     "Green Component" : 0.11759573966264725
   },
-  "Initial Text" : "tmux attach -t main || tmux new -s main"
+  "Initial Text" : "tmux attach -t 'ᓚᘏᗢ' || tmux new -s 'ᓚᘏᗢ'"
 }
