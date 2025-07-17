@@ -7,6 +7,13 @@ local M = {}
 
 M.nvdash = {
   load_on_startup = true,
+  buttons = {
+    { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
+    { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
+    { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
+    { txt = "  Lazygit", keys = "lg", cmd = ":lua require('snacks.lazygit').open()" },
+    { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+  },
 }
 
 M.base46 = {
