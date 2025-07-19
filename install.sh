@@ -21,6 +21,7 @@ brew install \
   eza \                             # modern ls replacement
   ripgrep \                         # fast grep alternative
   zoxide \                          # smarter cd command
+  btop \                            # fancy htop
 
 # Install fonts
 brew install \
