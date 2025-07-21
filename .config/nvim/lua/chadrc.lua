@@ -29,7 +29,7 @@ M.ui = {
     },
   },
   statusline = {
-    theme = "default",
+    theme = "vscode",
   },
   tabufline = {
     order = { "treeOffset", "buffers", "tabs" },
