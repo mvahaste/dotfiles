@@ -80,6 +80,7 @@ alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-
 alias n="nvim"
 alias lg="lazygit"
 alias fzf="fzf --preview 'bat --theme=gruvbox-dark --style=numbers --color=always {}'"
+alias bat="bat --theme=gruvbox-dark --color=always"
 
 # Functions
 # Fuzzy find a file in the current directory and open it with nvim
